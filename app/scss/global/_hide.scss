@@ -1,0 +1,51 @@
+//hide when reach certain breakpoint
+//desktop first
+.hide-for-mobile {
+    @include max-width(mobile) {
+        display: none;
+    }
+}
+
+.hide-for-tablets {
+    @include max-width(tablet) {
+        display: none;
+    }
+}
+
+.hide-for-laptops {
+    @include max-width(laptop) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include max-width(desktop) {
+        display: none;
+    }
+}
+
+//mobile first
+.hide-for-mobile-mf {
+    @include min-width(mobile) {
+        display: none;
+    }
+}
+
+@media(min-width: 769px) {
+    .hide-for-tablets-mf {
+        display: none;
+    }
+}
+
+.hide-for-laptops-mf {
+    @include min-width(laptop) {
+        display: none;
+    }
+}
+
+.hide-for-desktop-mf {
+    @include min-width(desktop) {
+        display: none;
+    }
+}
+

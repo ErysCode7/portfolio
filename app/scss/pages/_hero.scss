@@ -1,0 +1,107 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+
+    @include max-width(tablet) {
+        height: 100%;
+    }
+
+    &__container {
+       width: 85%;
+       margin: 0 auto;
+
+
+
+       @include max-width(laptop) {
+            width: 90%;
+        }
+    
+
+       @include max-width(tablet) {
+           width: 100%;
+           flex-direction: column;
+       }
+       
+       .hero-svg {
+           width: 100%;
+           height: 567px;
+           flex: 1;
+
+           @include max-width(tablet) {
+                height: 100%;
+                flex: unset;
+                margin-top: 1rem;
+            }
+       }
+    }
+
+    &__text {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include max-width(laptop) {
+            flex: unset;
+        }
+        
+  
+        @include max-width(tablet) {
+            margin-top: 5rem;
+            // flex: unset;
+        }
+
+        > .hero-name {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #FFFFFF;
+
+            @media (max-width: 1252px) {
+                font-size: 5.65rem;
+            }
+
+            @include max-width(desktop) {
+                font-size: 5.25rem;
+            }
+
+            @include max-width(laptop) {
+                font-size: 4.25rem;
+            }
+
+            @include max-width(tablet) {
+                font-size: 6rem;
+            }
+
+            @include max-width(mobile) {
+                font-size: 4rem;
+            }
+            @media (max-width: 325px) {
+                font-size: 2.5rem;
+            }
+
+            > span {
+                opacity: 0;
+                transition: all 1s ease;
+
+                &.fade {
+                    opacity: 1;
+                    color: $light-main;
+                }
+            }
+        }
+
+        > .hero-title {
+
+            @include max-width(mobile) {
+                font-size: 1.125rem;
+            }
+
+            @media (max-width: 300px) {
+                font-size: 0.875rem;
+            }
+
+        }
+    }
+}

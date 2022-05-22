@@ -1,0 +1,67 @@
+.sound {
+    position: fixed;
+    top: 0.7rem;
+    right: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: sound $tran-600ms ease 1.5s forwards;
+    z-index: 999999; 
+
+    @keyframes sound {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @include max-width(tablet) {
+        opacity: 1;
+        left: 0;
+        right: unset;
+        animation: none;
+       
+    }
+
+    &__container {
+        
+        @include max-width(tablet) {
+           margin-left: 1rem;
+           position: relative;
+        }
+    
+        > .fa-soundcloud {
+            height: 25px;
+            fill: $sound-color;
+            margin-right: 0.5rem;
+    
+            &.click {
+                fill: $light-main;
+            }
+        }
+    
+        > .sound-text {
+            color: #ffffff;
+            margin-right: 0.2rem;
+            
+            &.sound-off-on {
+                color: $sound-color;
+    
+                &.click {
+                    display: none;
+                }
+            }
+    
+            &.sound-on {
+                display: none;
+                color: $light-main;
+    
+                &.click {
+                    display: block;
+                }
+            }
+        }
+    }
+}

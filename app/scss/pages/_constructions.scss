@@ -1,0 +1,132 @@
+.construction {
+    height: 100vh;
+    width: 100%;
+
+    @include max-width(tablet) {
+        height: 100%;      
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        
+        @include max-width(tablet) {
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+        }
+      
+        >  svg.construction-svg {
+            width: 100%;
+            flex: 2;
+
+            @include max-width(tablet) {
+                margin-top: 4rem;
+                flex: 1;      
+                order: 1;    
+            }
+        }
+    }
+
+    &__frontend-logo {
+        flex: 1;
+        
+        @include max-width(tablet) {  
+            flex: unset;
+            order: 3; 
+            margin: 0.5rem 0;
+        }
+    }
+
+    &__text {
+        flex: 2;
+
+        @include max-width(tablet) {
+            flex: 1;
+            order: 2;
+            justify-content: center;
+            
+        }
+
+        > h1.cons-title {
+            font-size: 3rem;
+            color: $light-main;
+            // line-height: 80px;
+            margin-bottom: 1rem;
+
+            @include max-width(desktop) {
+                font-size: 2rem;
+            }
+
+            @include max-width(laptop) {
+                font-size: 1.65rem;
+            }
+
+            @include max-width(tablet) {
+                font-size: 2.2rem; 
+                margin-bottom: 0.5rem;
+                
+            }
+
+            > span {
+                opacity: 0;
+                transition: all 1s ease;
+
+                &.fade {
+                    opacity: 1;
+                    color: $light-main;
+                }
+            }
+        }
+
+        > p.cons-text {
+            font-size: 0.875rem;  
+            color: $color-main;
+            line-height: 1.75em;
+        }
+
+        > a.cons-email {
+            display: block;
+            margin-top: 2rem;
+            color: #dfdfdf;
+            transition: all $tran-300ms ease;
+
+            @include max-width(tablet) {
+                margin-top: 1rem;
+            }
+
+            &:hover {
+                color: $light-main;
+            }
+        }
+
+        > .construction-connect {
+            margin-top: 2rem;
+
+            @include max-width(tablet) {
+                margin-top: 1rem;
+            }
+
+            > p {
+                color: $color-main;
+            }
+
+            ul {
+
+                li {
+                    margin-right: 1rem;
+                    margin-top: 0.5rem;
+
+                    a {
+                        color: #dfdfdf;
+                        transition: all $tran-300ms ease;
+
+                        &:hover {
+                            color: $light-main;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

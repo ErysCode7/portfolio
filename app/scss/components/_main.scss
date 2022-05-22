@@ -1,0 +1,13 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    color: #ffffff;
+    overflow: hidden;
+
+    @include max-width(tablet) {
+        height: 100%;
+        grid-template-columns: 1fr;
+    }
+}

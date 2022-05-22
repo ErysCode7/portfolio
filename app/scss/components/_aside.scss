@@ -1,0 +1,144 @@
+.aside {
+    background-color: #161616;
+
+    @include max-width(tablet) {
+        position: fixed;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        height: 100vh;
+        transition: transform $tran-500ms ease;
+        transform: translateX(-100%);
+        transform-origin: left;
+        // left: -100%; 
+        opacity: 1;
+        z-index: 999;
+
+        &.show {
+            transition: transform $tran-300ms ease;
+            transform: translateX(0);
+            // left: 0;
+            opacity: 1;
+        }
+    } 
+
+    &__container {  
+        position: relative;
+        height: 95%;
+        width: 100%;
+        margin: auto 0;
+        
+        @include max-width(tablet) {
+            height: 100%;
+        }
+        
+    }
+
+    &__logo {
+
+        @include max-width(tablet) {
+            background: #000;
+            padding-top: 2.5rem;
+        }
+     
+        > .logo {
+           
+
+            @include max-width(tablet) {
+                width: 50%;
+                margin: 0 auto;
+                padding: 2rem 0;
+
+            }
+      
+            a {
+               
+                > img {
+                    width: 90%;
+                    height: 100%;
+                    margin: 0 auto;
+                    object-fit: cover;
+                    
+                    @include max-width(tablet) {
+                        
+                    }
+                }
+            }
+           
+        }
+    }
+
+    &__nav { 
+        width: 100%;
+
+
+        > ul {
+            width: 100%;
+           
+           
+
+            > li {
+                width: 100%;            
+                text-align: center;
+                border-top: 1px $border-color solid;
+                border-bottom: 1px $border-color solid;
+     
+
+               > a.nav-links {
+                    padding: 1.125rem;
+                    width: 100%;   
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-main;
+                    transition: color $tran-300ms ease;
+
+                    &:hover {
+                        color: $light-main;
+                    }
+                   
+                }
+            }
+        }
+    }
+
+  
+
+    &__social-med-icons {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        @include max-width(tablet) {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        > ul {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 2rem;       
+    
+            > svg.social-svg {
+                height: 19.2px;
+                cursor: pointer; 
+            }
+
+            svg.social-svg:hover path {
+                transition: all $tran-300ms ease;
+                fill: $light-main;
+            }
+        }
+    }
+
+    //icons
+    .aside-svg-icons {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+
+

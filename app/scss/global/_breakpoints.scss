@@ -1,0 +1,31 @@
+//BREAKPOINTS
+//mobile first
+$min-width: (
+    "mobile": "576px",
+    "tablet": "768px",
+    "laptop": "992px",
+    "desktop": "1200px",
+    "large": "1400px"
+);
+
+//desktop first
+$max-width: (
+    "mobile": "575.98px",
+    "tablet": "768px",
+    "laptop": "991.98px",
+    "desktop": "1199.98px"
+);
+
+//mobile first
+@mixin min-width($size) {
+    @media(min-width: map-get($min-width, $size)) {
+        @content;
+    }
+}
+
+//desktop first
+@mixin max-width($size) {
+    @media(max-width: map-get($max-width, $size)) {
+        @content;
+    }
+}
