@@ -9,7 +9,7 @@ if(window.innerWidth > 768) {
         .fromTo(heroText, {opacity: 0, delay: .5}, {opacity: 1})
         .from(heroText, {x: "100%"})
         .from(heroTitle, {opacity: 0, y: "100%", delay: .5})
-        .from(body, {overflow: "hidden", duration: 5})   
+        .from(body, {overflow: "hidden", duration: 4})   
 }
 
 

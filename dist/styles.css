@@ -896,6 +896,19 @@ a, a::before, a::after {
   }
 }
 
+@media (max-width: 575.98px) {
+  .construction__text > h1.cons-title {
+    font-size: 1.95rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .construction__text > h1.cons-title {
+    font-size: 1.5rem;
+  }
+}
+
 .construction__text > h1.cons-title > span {
   opacity: 0;
   -webkit-transition: all 1s ease;

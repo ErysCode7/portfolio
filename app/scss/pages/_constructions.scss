@@ -35,6 +35,9 @@
             flex: unset;
             order: 3; 
             margin: 0.5rem 0;
+            // width: 120px;
+            // height: 150px;
+            // margin-left: 70%;
         }
     }
 
@@ -65,7 +68,15 @@
             @include max-width(tablet) {
                 font-size: 2.2rem; 
                 margin-bottom: 0.5rem;
-                
+            }
+
+            @include max-width(mobile) {
+                font-size: 1.95rem; 
+                margin-bottom: 0.5rem;
+            }
+
+            @media(max-width: 300px) {
+                font-size: 1.5rem;
             }
 
             > span {
