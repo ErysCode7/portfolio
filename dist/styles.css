@@ -706,6 +706,7 @@ a, a::before, a::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 0;
 }
 
 @media (max-width: 991.98px) {

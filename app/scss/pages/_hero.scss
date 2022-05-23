@@ -42,6 +42,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        opacity: 0;
 
         @include max-width(laptop) {
             flex: unset;
